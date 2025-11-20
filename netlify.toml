@@ -1,9 +1,10 @@
 [build]
   # Directory to change to before starting a build
-  base = "client/"
+  base = "client"
   
   # Directory that contains the deploy-ready HTML files and assets
-  publish = "dist/"
+  # This is relative to the 'base' directory
+  publish = "dist"
   
   # Default build command
   command = "npm run build"
