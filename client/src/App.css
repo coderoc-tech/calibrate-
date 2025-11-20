@@ -350,7 +350,7 @@ button:hover {
   right: -5%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0,0,0,0) 70%);
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
   border-radius: 50%;
   z-index: 0;
 }
@@ -362,7 +362,7 @@ button:hover {
   left: -5%;
   width: 600px;
   height: 600px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, rgba(0,0,0,0) 70%);
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
   border-radius: 50%;
   z-index: 0;
 }
@@ -382,8 +382,15 @@ button:hover {
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .login-header {
@@ -451,6 +458,25 @@ button:hover {
 .login-btn:hover {
   transform: translateY(-2px);
   box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4);
+}
+
+.demo-btn {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1rem;
+}
+
+.demo-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 .login-footer {

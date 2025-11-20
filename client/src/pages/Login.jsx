@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const { login } = useContext(AuthContext);
+    const { login, loginDemo } = useContext(AuthContext);
     const navigate = useNavigate();
     const [error, setError] = useState('');
 
@@ -17,6 +17,11 @@ const Login = () => {
         } catch (err) {
             setError('Invalid credentials');
         }
+    };
+
+    const handleDemoLogin = () => {
+        loginDemo();
+        navigate('/');
     };
 
     return (
@@ -53,6 +58,7 @@ const Login = () => {
                     </div>
 
                     <button type="submit" className="login-btn">Sign In</button>
+                    <button type="button" onClick={handleDemoLogin} className="demo-btn">Demo Login</button>
                 </form>
 
                 <div className="login-footer">

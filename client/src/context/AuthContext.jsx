@@ -32,6 +32,18 @@ export const AuthProvider = ({ children }) => {
         return res.data;
     };
 
+    const loginDemo = () => {
+        const demoUser = {
+            id: 'demo-123',
+            username: 'Demo Admin',
+            email: 'demo@edith.com',
+            role: 'Admin'
+        };
+        localStorage.setItem('token', 'demo-token-123');
+        localStorage.setItem('user', JSON.stringify(demoUser));
+        setUser(demoUser);
+    };
+
     const logout = () => {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
@@ -39,7 +51,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={{ user, login, register, logout, loading }}>
+        <AuthContext.Provider value={{ user, login, register, logout, loading, loginDemo }}>
             {children}
         </AuthContext.Provider>
     );
